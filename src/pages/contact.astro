@@ -1,0 +1,30 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const links = [
+  { label: 'GitHub', href: 'https://github.com/olikiverjesus', note: 'Public repositories and project activity' },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/olikiverdejesusbarros/', note: 'Best place to reach out directly' },
+  { label: 'Signal Layer Labs', href: 'https://github.com/signal-layer-labs', note: 'Open-source resources and builder infrastructure' },
+  { label: 'Signal Layer Builders', href: 'https://signal-layer-website.vercel.app', note: 'Builder directory and community surface' },
+];
+---
+
+<BaseLayout title="Contact | Olikiver Barros" description="Contact Olikiver Barros for operational AI, workflow automation, analytics, and full-stack systems work.">
+  <section class="mx-auto w-full max-w-6xl px-5 py-16 sm:px-6 lg:px-8">
+    <p class="mb-4 font-mono text-xs uppercase tracking-[0.26em] text-signal">Contact</p>
+    <h1 class="max-w-3xl text-balance text-4xl font-semibold tracking-tight text-white sm:text-5xl">Reach out through LinkedIn.</h1>
+    <p class="mt-5 max-w-2xl text-lg leading-8 text-mist">
+      For systems work, AI workflow design, automation, analytics infrastructure, or Signal Layer collaboration, LinkedIn is the simplest contact path for now.
+    </p>
+  </section>
+
+  <section class="mx-auto grid w-full max-w-6xl gap-4 px-5 pb-16 sm:px-6 md:grid-cols-2 lg:px-8">
+    {links.map((link) => (
+      <a class="rounded-lg border border-line/80 bg-panel/65 p-5 hover:border-signal/50" href={link.href} target="_blank" rel="noreferrer">
+        <p class="font-mono text-xs uppercase tracking-[0.2em] text-copper">{link.label}</p>
+        <p class="mt-4 text-sm leading-6 text-mist">{link.note}</p>
+        <span class="mt-5 inline-flex text-sm text-signal">Open link</span>
+      </a>
+    ))}
+  </section>
+</BaseLayout>

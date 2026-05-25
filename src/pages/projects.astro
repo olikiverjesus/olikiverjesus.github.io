@@ -1,0 +1,21 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import { projects } from '../data/projects';
+---
+
+<BaseLayout title="Projects | Olikiver Barros" description="Selected proof-of-work across operational AI, workflow automation, analytics, and full-stack systems.">
+  <section class="mx-auto w-full max-w-6xl px-5 py-16 sm:px-6 lg:px-8">
+    <p class="mb-4 font-mono text-xs uppercase tracking-[0.26em] text-signal">Projects</p>
+    <h1 class="max-w-3xl text-balance text-4xl font-semibold tracking-tight text-white sm:text-5xl">Systems, resources, and operational infrastructure.</h1>
+    <p class="mt-5 max-w-2xl text-lg leading-8 text-mist">
+      Public and private-facing work across AI systems, workflow reliability, analytics, automation, and product operations.
+    </p>
+  </section>
+
+  <section class="mx-auto w-full max-w-6xl px-5 pb-16 sm:px-6 lg:px-8">
+    <div class="grid gap-4 md:grid-cols-2">
+      {projects.map((project) => <ProjectCard project={project} />)}
+    </div>
+  </section>
+</BaseLayout>

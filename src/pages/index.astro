@@ -1,0 +1,82 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Section from '../components/Section.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import Tag from '../components/Tag.astro';
+import { featuredProjects } from '../data/projects';
+import { writingEntries } from '../data/writing';
+
+const strengths = [
+  'Operational AI systems',
+  'Workflow automation',
+  'Data analytics and reporting',
+  'Full-stack product systems',
+  'Systems thinking',
+  'Open-source builder infrastructure',
+];
+---
+
+<BaseLayout>
+  <section class="mx-auto grid min-h-[76vh] w-full max-w-6xl items-center gap-10 px-5 py-16 sm:px-6 lg:grid-cols-[1.25fr_0.75fr] lg:px-8">
+    <div>
+      <p class="mb-5 font-mono text-xs uppercase tracking-[0.26em] text-signal">Proof-of-work hub</p>
+      <h1 class="max-w-4xl text-balance text-4xl font-semibold tracking-tight text-white sm:text-6xl">
+        Olikiver Barros builds operational systems across data, automation, AI workflows, and full-stack products.
+      </h1>
+      <p class="mt-6 max-w-2xl text-lg leading-8 text-mist">
+        Turning messy workflows into reliable systems, tools, and practical infrastructure.
+      </p>
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a class="rounded border border-signal/50 bg-signal/10 px-4 py-2 text-sm font-medium text-white hover:bg-signal/15" href="/projects">View projects</a>
+        <a class="rounded border border-line px-4 py-2 text-sm font-medium text-mist hover:border-white/40 hover:text-white" href="/contact">Contact</a>
+      </div>
+    </div>
+    <aside class="rounded-lg border border-line/80 bg-panel/65 p-5">
+      <p class="font-mono text-xs uppercase tracking-[0.22em] text-copper">Current focus</p>
+      <div class="mt-5 space-y-4 text-sm leading-6 text-mist">
+        <p>Practical infrastructure for AI systems that need to be operated, observed, documented, and improved after the demo.</p>
+        <p>Open resources for builders working with workflows, reliability, automation, and production constraints.</p>
+      </div>
+    </aside>
+  </section>
+
+  <Section eyebrow="Selected work" title="Featured Projects" intro="A small set of public systems and resources that reflect the operating model behind the work.">
+    <div class="grid gap-4 md:grid-cols-3">
+      {featuredProjects.map((project) => <ProjectCard project={project} />)}
+    </div>
+  </Section>
+
+  <Section eyebrow="Strengths" title="Core Operating Range" intro="The work sits where technical systems meet repeatable operations.">
+    <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+      {strengths.map((strength) => (
+        <div class="rounded-lg border border-line/80 bg-white/[0.03] p-4">
+          <p class="text-sm font-medium text-white">{strength}</p>
+        </div>
+      ))}
+    </div>
+  </Section>
+
+  <Section eyebrow="Writing" title="Recent Notes and Resources" intro="Short-form resources on systems, reliability, AI workflows, and practical infrastructure.">
+    <div class="grid gap-4 md:grid-cols-3">
+      {writingEntries.slice(0, 3).map((entry) => (
+        <article class="rounded-lg border border-line/80 bg-panel/60 p-5">
+          <p class="font-mono text-xs uppercase tracking-[0.2em] text-copper">{entry.status}</p>
+          <h3 class="mt-4 text-lg font-semibold text-white">{entry.title}</h3>
+          <p class="mt-3 text-sm leading-6 text-mist">{entry.description}</p>
+          <div class="mt-5 flex flex-wrap gap-2">
+            {entry.topics.map((topic) => <Tag label={topic} />)}
+          </div>
+        </article>
+      ))}
+    </div>
+  </Section>
+
+  <section class="mx-auto w-full max-w-6xl px-5 py-14 sm:px-6 lg:px-8">
+    <div class="rounded-lg border border-line/80 bg-white/[0.04] p-6 sm:p-8">
+      <p class="font-mono text-xs uppercase tracking-[0.22em] text-signal">Contact</p>
+      <h2 class="mt-4 text-2xl font-semibold tracking-tight text-white">Need a system made clearer, more reliable, or easier to operate?</h2>
+      <p class="mt-3 max-w-2xl text-base leading-7 text-mist">Reach out for AI workflow design, automation, analytics infrastructure, or practical systems work.</p>
+      <a class="mt-6 inline-flex rounded border border-signal/50 bg-signal/10 px-4 py-2 text-sm font-medium text-white hover:bg-signal/15" href="/contact">Get in touch</a>
+    </div>
+  </section>
+</BaseLayout>
