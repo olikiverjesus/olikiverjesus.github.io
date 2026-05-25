@@ -13,6 +13,10 @@ Live target: <https://olikiverjesus.github.io>
 - GitHub Pages
 - GitHub Actions
 
+## Design Philosophy
+
+The site is intentionally static, lightweight, and proof-of-work focused. The visual system should stay calm and technical: restrained dark UI, clear typography, concise cards, subtle borders, and no fake metrics or heavy animation.
+
 ## Local Setup
 
 ```bash
