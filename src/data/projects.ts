@@ -34,7 +34,7 @@ export const projects: Project[] = [
   {
     title: 'Signal Layer Labs',
     description:
-      'An open-source and community initiative focused on practical resources for operational AI, workflows, reliability, and systems thinking.',
+      'Open-source and community infrastructure for practical operational AI, workflows, reliability, and systems thinking.',
     href: 'https://github.com/signal-layer-labs',
     status: 'Public organization',
     tags: ['Open Source', 'Community', 'AI Systems', 'Builder Ecosystem'],
@@ -42,7 +42,7 @@ export const projects: Project[] = [
   {
     title: 'IFC / Operational Analytics Work',
     description:
-      'Analytics, automation, and operational reporting systems for business workflows, sales visibility, and internal decision-making.',
+      'Analytics, automation, and operational reporting systems for business workflows, sales visibility, and decision-making.',
     status: 'Private work',
     tags: ['Data Analytics', 'Looker Studio', 'Google Apps Script', 'Automation', 'Operations'],
   },

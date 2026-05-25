@@ -26,11 +26,13 @@ The development server runs locally at the URL printed by Astro, usually `http:/
 
 ```bash
 npm run dev
+npm run check
 npm run build
 npm run preview
 ```
 
 - `npm run dev` starts the local development server.
+- `npm run check` runs Astro diagnostics.
 - `npm run build` type-checks and builds the static site into `dist/`.
 - `npm run preview` previews the production build locally.
 
@@ -88,3 +90,12 @@ Add a new object with:
 - `topics`
 
 The `src/content/writing/` directory is reserved for future MDX writing entries if the site grows into full articles.
+
+## Manual Review Checklist
+
+Before publishing larger changes:
+
+- Run `npm run build`.
+- Check `/`, `/projects`, `/writing`, `/signal-layer`, and `/contact` locally.
+- Verify the GitHub Actions deployment completed successfully after pushing to `main`.
+- Run Lighthouse manually in the browser for performance, accessibility, best practices, and SEO.

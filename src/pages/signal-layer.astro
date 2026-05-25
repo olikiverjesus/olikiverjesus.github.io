@@ -27,13 +27,21 @@ const resources = [
     <p class="mb-4 font-mono text-xs uppercase tracking-[0.26em] text-signal">Signal Layer</p>
     <h1 class="max-w-3xl text-balance text-4xl font-semibold tracking-tight text-white sm:text-5xl">Practical infrastructure and resources for builders putting systems into production.</h1>
     <p class="mt-5 max-w-2xl text-lg leading-8 text-mist">
-      Signal Layer is a builder ecosystem focused on AI systems, workflows, orchestration, automation, observability, reliability, operational AI, and systems thinking.
+      Signal Layer is a small builder ecosystem focused on AI systems, workflows, orchestration, automation, observability, reliability, operational AI, and systems thinking.
     </p>
   </section>
 
-  <section class="mx-auto w-full max-w-6xl px-5 pb-8 sm:px-6 lg:px-8">
-    <div class="flex flex-wrap gap-2">
-      {focusAreas.map((area) => <Tag label={area} />)}
+  <section class="mx-auto w-full max-w-6xl px-5 pb-10 sm:px-6 lg:px-8">
+    <div class="grid gap-6 lg:grid-cols-[0.85fr_1.15fr]">
+      <div class="flex flex-wrap gap-2">
+        {focusAreas.map((area) => <Tag label={area} />)}
+      </div>
+      <div class="rounded-lg border border-line/80 bg-white/[0.03] p-5">
+        <p class="font-mono text-xs uppercase tracking-[0.2em] text-copper">Why it exists</p>
+        <p class="mt-4 text-sm leading-6 text-mist">
+          Many AI and automation projects look finished at the demo stage but fail in handoffs, monitoring, maintenance, and operational edge cases. Signal Layer collects practical resources for builders who care about those production details.
+        </p>
+      </div>
     </div>
   </section>
 

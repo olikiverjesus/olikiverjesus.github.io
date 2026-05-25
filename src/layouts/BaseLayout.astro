@@ -10,7 +10,7 @@ type Props = {
 
 const siteTitle = 'Olikiver Barros | Operational AI Systems';
 const defaultDescription =
-  'Proof-of-work hub for operational AI, workflow automation, data analytics, full-stack systems, and practical builder infrastructure.';
+  'Olikiver Barros builds operational systems across data, automation, AI workflows, and full-stack products.';
 const { title = siteTitle, description = defaultDescription } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site);
 ---
@@ -28,7 +28,10 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonical} />
+    <meta property="og:site_name" content="Olikiver Barros" />
     <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
     <title>{title}</title>
   </head>
   <body>
